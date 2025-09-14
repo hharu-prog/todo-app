@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOリスト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TODOリスト</h1>
+        <div class="input-area">
+            <input type="text" id="todo-input" placeholder="タスクを入力">
+            <button id="add-button">追加</button>
+        </div>
+        
+        <div class="filter-area">
+            <button class="filter-btn active" data-filter="all">すべて</button>
+            <button class="filter-btn" data-filter="active">作業中</button>
+            <button class="filter-btn" data-filter="completed">完了</button>
+        </div>
+
+        <div class="task-summary">
+            <span id="task-count"></span>
+            <button id="clear-completed-btn" class="clear-btn">完了を削除</button>
+        </div>
+        <ul id="todo-list">
+            </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#add-button:hover {
+    background-color: #0056b3;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer; /* クリックできることが分かるようにカーソルを変更 */
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.edit-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #007bff; /* 編集中であることが分かるように青い枠線 */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.filter-area {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px; /* ボタン間の隙間 */
+}
+
+.filter-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    flex-grow: 1; /* ボタンが均等に広がるように */
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.todo-item {
+    /* ...既存のスタイル... */
+    transition: all 0.3s ease-out; /*  アニメーションの基本設定 */
+}
+
+/*  アニメーション用のクラス */
+.todo-item.exit {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.task-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.clear-btn {
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.clear-btn:hover {
+    text-decoration: underline;
+}
+
+.clear-btn.hidden {
+    visibility: hidden; /* ボタンを非表示にするためのクラス */
+}
