@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('add-button');
     const todoList = document.getElementById('todo-list');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const taskCount = document.getElementById('task-count'); // ★ 追加
-    const clearCompletedBtn = document.getElementById('clear-completed-btn'); // ★ 追加
+    const taskCount = document.getElementById('task-count'); 
+    const clearCompletedBtn = document.getElementById('clear-completed-btn'); 
 
     // === アプリケーションの状態 ===
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
